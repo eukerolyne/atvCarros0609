@@ -1,0 +1,48 @@
+﻿@model atvCarros0609.Veiculos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Veiculos</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.proprietario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.proprietario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.placa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.placa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.corVe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.corVe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.modeloVe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.modeloVe)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit"  class="btn btn-primary" asp-route-id="@Model?.veiculosId">Editar</a> |
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</div>

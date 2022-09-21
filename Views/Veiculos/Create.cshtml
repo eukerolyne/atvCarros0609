@@ -1,0 +1,56 @@
+﻿@model atvCarros0609.Veiculos
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Veiculos</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" >
+                <label asp-for="proprietario" class="control-label"></label>
+                <input asp-for="proprietario" class="form-control" placeholder="Nome Completo" />
+                <span asp-validation-for="proprietario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="telefone" class="control-label"></label>
+                <input asp-for="telefone" class="form-control" placeholder="(99) 9 9999-9999" />
+                <span asp-validation-for="telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="placa" class="control-label"></label>
+                <input asp-for="placa" class="form-control" placeholder="AAA-1234 ou AAA1A23"/>
+                <span asp-validation-for="placa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="corVe" class="control-label"></label>
+                <input asp-for="corVe" class="form-control" placeholder="Ex: Vermelho"/>
+                <span asp-validation-for="corVe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="modeloVe" class="control-label"></label>
+                <input asp-for="modeloVe" class="form-control" placeholder="Ex: Picasso"/>
+                <span asp-validation-for="modeloVe" class="text-danger"></span>
+            </div>
+@*            <div class="form-group">
+                
+            </div>*@
+        </form>
+    </div>
+</div>
+
+<div class="form-group">
+    <br />
+    <input type="submit" value="Salvar" class="btn btn-primary" /> |
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
